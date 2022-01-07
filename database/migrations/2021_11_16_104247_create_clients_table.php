@@ -23,7 +23,9 @@ class CreateClientsTable extends Migration
             //specification de la clé étrangère
             $table->unsignedBigInteger('address_id');
             $table->index('address_id');
-             $table->foreign('address_id')->references('id')->on('addresses')->onDelete('cascade');
+            // $table->foreign('address_id')->references('id')->on('addresses')->onDelete('cascade');
+            // $table->foreignId('address_id')->constrained('addresses')
+            // ->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
             });
         //    Schema::table('clients', function (Blueprint $table) {
